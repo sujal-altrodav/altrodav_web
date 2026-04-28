@@ -1,0 +1,20 @@
+{
+  "agent_name": "Placemux Info Assistant",
+  "agent_id": "69e7af1b0476e9f953a53bdd",
+  "description": "Answers visitor questions about the Placemux campus-to-career program, tracks, pricing, placement event, and eligibility using comprehensive program information embedded in its instructions.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "result": {
+      "answer": "string",
+      "suggested_section": "string"
+    }
+  },
+  "example_response": {
+    "result": {
+      "answer": "The conversational response to the visitor's question",
+      "suggested_section": "Which website section to check for more info (Tracks, Pricing, Placement Event, For Colleges, FAQ, Enroll Now, or empty string)"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "workflow": {
+    "nodes": [
+      {"id": "input_node", "type": "Input", "label": "Visitor Question", "nodeCategory": "input"},
+      {"id": "placemux_agent", "type": "Agent", "label": "Placemux Info Assistant", "nodeCategory": "agent"},
+      {"id": "output_node", "type": "Output", "label": "Chat Response", "nodeCategory": "end"}
+    ],
+    "edges": [
+      {"source": "input_node", "target": "placemux_agent"},
+      {"source": "placemux_agent", "target": "output_node"}
+    ]
+  },
+  "agents": [
+    {
+      "agent_id": "69e7af1b0476e9f953a53bdd",
+      "name": "Placemux Info Assistant",
+      "node_id": "placemux_agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6",
+      "temperature": 0.4,
+      "top_p": 1,
+      "image_output_config": null,
+      "voice_config": null,
+      "file_output": false
+    }
+  ]
+}
