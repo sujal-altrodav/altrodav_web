@@ -5,8 +5,8 @@ import { FiPlus, FiMinus } from 'react-icons/fi'
 
 const FAQS = [
   {
-    q: 'How long is the Placemux program?',
-    a: 'The Placemux program is a comprehensive 3-month intensive course. Month 1 focuses on foundation and core skills, Month 2 on advanced projects and specialization, and Month 3 on interview preparation and placement readiness. The 2-Day Mega Placement Event happens at the end of Month 3.',
+    q: 'How long is the Altrodav program?',
+    a: 'The Altrodav program is a comprehensive 3-month intensive course. Month 1 focuses on foundation and core skills, Month 2 on advanced projects and specialization, and Month 3 on interview preparation and placement readiness. The 2-Day Mega Placement Event happens at the end of Month 3.',
   },
   {
     q: 'Who is eligible to enroll?',
@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: 'Do I get a certificate?',
-    a: 'Yes, all students who complete the program receive a Placemux Certificate of Completion. This is an industry-recognized credential that validates your technical skills, project portfolio, and placement readiness.',
+    a: 'Yes, all students who complete the program receive an Altrodav Certificate of Completion. This is an industry-recognized credential that validates your technical skills, project portfolio, and placement readiness.',
   },
   {
     q: 'What payment options are available?',
@@ -47,7 +47,7 @@ export default function FAQ() {
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest uppercase text-[#7B93FF] mb-3">FAQ</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Frequently Asked Questions</h2>
-          <p className="text-gray-400 mt-3">Everything you need to know about the Placemux program.</p>
+          <p className="text-gray-400 mt-3">Everything you need to know about the Altrodav program.</p>
         </div>
         <div className="space-y-3">
           {FAQS.map((faq, i) => {

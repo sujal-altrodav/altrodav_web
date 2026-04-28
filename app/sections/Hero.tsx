@@ -26,7 +26,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
             Your Career Journey,{' '}
             <span className="bg-gradient-to-r from-[#4A5FE7] via-[#00BCD4] to-[#4CAF50] bg-clip-text text-transparent">
-              Starts at Placemux.
+              Starts at Altrodav.
             </span>
           </h1>
           <p className="text-lg text-gray-400 max-w-lg leading-relaxed">

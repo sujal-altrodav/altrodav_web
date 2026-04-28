@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0B0D1A]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <button onClick={() => handleNav('#hero')} className="flex items-center gap-2">
-          <img src="/logo2.png" alt="PlaceMux" className="h-9 w-auto object-contain" />
+          <img src="/alt_logo.png" alt="Altrodav" className="h-9 w-auto object-contain" />
         </button>
 
         <div className="hidden md:flex items-center gap-8">

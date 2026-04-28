@@ -22,12 +22,12 @@ export default function ForColleges() {
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest uppercase text-[#4A5FE7] mb-3">Partnerships</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">For Colleges & Institutions</h2>
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">Partner with Placemux to transform your campus placement outcomes and give your students a competitive edge.</p>
+          <p className="text-gray-500 mt-4 max-w-2xl mx-auto">Partner with Altrodav to transform your campus placement outcomes and give your students a competitive edge.</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-6 text-gray-900">Why Colleges Choose Placemux</h3>
+            <h3 className="text-xl font-semibold mb-6 text-gray-900">Why Colleges Choose Altrodav</h3>
             {VALUE_PROPS.map((item) => (
               <div key={item} className="flex items-start gap-3 p-4 bg-white border border-gray-100 rounded-xl hover:shadow-sm transition-shadow">
                 <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">

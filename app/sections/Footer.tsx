@@ -25,8 +25,8 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <img
-              src="/logo2.png"
-              alt="PlaceMux"
+              src="/alt_logo.png"
+              alt="Altrodav"
               className="h-9 w-auto object-contain mb-4"
             />
 
@@ -83,7 +83,7 @@ export default function Footer() {
           <div>
             <p className="font-semibold mb-4 text-sm">Contact</p>
             <ul className="space-y-2.5 text-sm text-gray-500">
-              <li>contact@placemux.com</li>
+              <li>contact@altrodav.com</li>
               <li>+91 7022665938</li>
               <li>
                 Devarabisanahalli, Bellandur, Bangalore South, Karnataka –
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 relative">
           <p className="text-xs text-gray-600 text-center">
-            ©️ 2024 Placemux by Altrodav Technologies Pvt Ltd. All rights reserved.
+            ©️ 2024 Altrodav Technologies Pvt Ltd. All rights reserved.
           </p>
 
           <div className="mt-4 sm:mt-0 sm:absolute sm:right-0 sm:top-8 flex justify-center sm:justify-end gap-6">

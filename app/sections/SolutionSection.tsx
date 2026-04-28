@@ -14,12 +14,12 @@ export default function SolutionSection() {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold tracking-widest uppercase text-[#4A5FE7] mb-3">The Placemux Difference</p>
+          <p className="text-sm font-semibold tracking-widest uppercase text-[#4A5FE7] mb-3">The Altrodav Difference</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
             A Complete Career Acceleration Ecosystem
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-            Placemux combines rigorous technical training, real-world project experience, and direct access to 100+ hiring companies in a single 3-month program.
+            Altrodav combines rigorous technical training, real-world project experience, and direct access to 100+ hiring companies in a single 3-month program.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

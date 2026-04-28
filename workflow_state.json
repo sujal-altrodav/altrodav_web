@@ -2,7 +2,7 @@
   "workflow": {
     "nodes": [
       {"id": "input_node", "type": "Input", "label": "Visitor Question", "nodeCategory": "input"},
-      {"id": "placemux_agent", "type": "Agent", "label": "Placemux Info Assistant", "nodeCategory": "agent"},
+      {"id": "placemux_agent", "type": "Agent", "label": "Altrodav Info Assistant", "nodeCategory": "agent"},
       {"id": "output_node", "type": "Output", "label": "Chat Response", "nodeCategory": "end"}
     ],
     "edges": [
@@ -13,7 +13,7 @@
   "agents": [
     {
       "agent_id": "69e7af1b0476e9f953a53bdd",
-      "name": "Placemux Info Assistant",
+      "name": "Altrodav Info Assistant",
       "node_id": "placemux_agent",
       "provider": "Anthropic",
       "model": "claude-sonnet-4-6",

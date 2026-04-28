@@ -8,10 +8,10 @@ import ClientProviders from "@/components/ClientProviders";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Placemux",
+  title: "Altrodav",
   description: "Campus to Career",
   icons: {
-    icon: "/placemux_logo_single.png",
+    icon: "/alt_fav.png",
   },
 };
 

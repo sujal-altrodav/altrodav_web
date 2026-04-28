@@ -69,7 +69,7 @@ export default function ChatWidget() {
           <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-gradient-to-r from-purple-600/20 to-pink-500/20">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />
-              <p className="font-semibold text-sm">Placemux Assistant</p>
+              <p className="font-semibold text-sm">Altrodav Assistant</p>
             </div>
             <button onClick={() => setOpen(false)} className="text-muted-foreground hover:text-foreground transition-colors">
               <FiX size={18} />
@@ -79,7 +79,7 @@ export default function ChatWidget() {
           <ScrollArea className="flex-1 px-4 py-3">
             {messages.length === 0 && (
               <div className="text-center py-8">
-                <p className="text-sm text-muted-foreground">Ask me anything about Placemux programs, tracks, pricing, or placement events.</p>
+                <p className="text-sm text-muted-foreground">Ask me anything about Altrodav programs, tracks, pricing, or placement events.</p>
               </div>
             )}
             <div className="space-y-3">

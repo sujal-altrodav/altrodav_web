@@ -1,7 +1,7 @@
 {
-  "agent_name": "Placemux Info Assistant",
+  "agent_name": "Altrodav Info Assistant",
   "agent_id": "69e7af1b0476e9f953a53bdd",
-  "description": "Answers visitor questions about the Placemux campus-to-career program, tracks, pricing, placement event, and eligibility using comprehensive program information embedded in its instructions.",
+  "description": "Answers visitor questions about the Altrodav campus-to-career program, tracks, pricing, placement event, and eligibility using comprehensive program information embedded in its instructions.",
   "agent_type": "json",
   "accessor": "result",
   "auto_generated": true,
