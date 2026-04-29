@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: 'What is the class schedule like?',
-    a: 'Weekday sessions run from 6:00 PM to 9:00 PM (live lectures, Q&A, and practice). Weekend sessions run from 10:00 AM to 4:00 PM (project work, mentor office hours, and mock tests). The schedule is designed to be compatible with regular college hours.',
+    a: 'Weekday sessions include project work, mentor office hours, and mock tests. Weekend sessions include live lectures, Q&A, and practice. The schedule is designed to be compatible with regular college hours.',
   },
   {
     q: 'Are there any prerequisites?',

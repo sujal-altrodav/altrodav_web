@@ -31,8 +31,8 @@ const PHASES: Phase[] = [
 ]
 
 const SCHEDULE = {
-  weekday: { title: 'Weekday Schedule', items: ['6:00 PM - 7:30 PM: Live Lecture', '7:30 PM - 8:00 PM: Q&A Session', '8:00 PM - 9:00 PM: Lab / Practice'] },
-  weekend: { title: 'Weekend Schedule', items: ['10:00 AM - 12:00 PM: Project Work', '12:00 PM - 1:00 PM: Mentor Office Hours', '2:00 PM - 4:00 PM: Mock Tests / Reviews'] },
+  weekday: { title: 'Weekday Schedule', items: ['Project Work', 'Mentor Office Hours', 'Mock Tests / Reviews'] },
+  weekend: { title: 'Weekend Schedule', items: ['Live Lecture', 'Q&A Session', 'Lab / Practice'] },
 }
 
 export default function ProgramTimeline() {
