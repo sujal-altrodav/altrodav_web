@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FiPlus, FiMinus } from 'react-icons/fi'
+import { Minus, Plus } from 'lucide-react'
 
 const FAQS = [
   {
@@ -14,7 +14,7 @@ const FAQS = [
   },
   {
     q: 'What is the refund policy?',
-    a: 'We offer a 100% refund guarantee for the Program + Placement Event tier. If you complete the entire program, meet all attendance and scorecard requirements (80% attendance, 75% scorecard), and are not placed through our event, we will refund your entire fee. No questions asked.',
+    a: 'Candidates who complete the 90-day Training Phase with at least 80% attendance and a 75% average score on tasks and assessments are eligible for a full refund if they do not secure a job offer during the following 90-day Placement Opportunity Window. Refund requests may be submitted only after day 180 to support@altrodav.com, and will be processed within 30 days to the original payment account.',
   },
   {
     q: 'Is placement guaranteed?',
@@ -57,7 +57,7 @@ export default function FAQ() {
                 <button onClick={() => setOpenIdx(isOpen ? null : i)} className="w-full flex items-center justify-between p-5 text-left">
                   <span className="font-semibold text-sm pr-4">{faq.q}</span>
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center">
-                    {isOpen ? <FiMinus size={14} /> : <FiPlus size={14} />}
+                    {isOpen ? <Minus size={14} /> : <Plus size={14} />}
                   </span>
                 </button>
                 {isOpen && (

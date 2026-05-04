@@ -1,6 +1,7 @@
 'use client'
 
-import { FiTwitter, FiLinkedin, FiInstagram, FiYoutube } from 'react-icons/fi'
+import Image from 'next/image'
+import { Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 
 const PROGRAM_LINKS = [
   'AI/ML Engineering',
@@ -10,13 +11,7 @@ const PROGRAM_LINKS = [
   'DevOps Engineering',
 ]
 
-const RESOURCE_LINKS = [
-  'Blog',
-  'Career Guide',
-  'Student Stories',
-  'Webinars',
-  'Events',
-]
+const RESOURCE_LINKS = ['Refund Policy']
 
 export default function Footer() {
   return (
@@ -24,9 +19,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <img
+            <Image
               src="/alt_logo.png"
               alt="Altrodav"
+              width={144}
+              height={36}
               className="h-9 w-auto object-contain mb-4"
             />
 
@@ -36,7 +33,7 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-3">
-              {[FiTwitter, FiLinkedin, FiInstagram, FiYoutube].map((Icon, i) => (
+              {[Twitter, Linkedin, Instagram, Youtube].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
@@ -70,7 +67,7 @@ export default function Footer() {
               {RESOURCE_LINKS.map((link) => (
                 <li key={link}>
                   <a
-                    href="#"
+                    href="/refund-policy"
                     className="text-sm text-gray-500 hover:text-white transition-colors"
                   >
                     {link}
