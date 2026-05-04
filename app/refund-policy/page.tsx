@@ -1,8 +1,12 @@
+'use client'
+
 import Link from 'next/link'
+import Navbar from '../sections/Navbar'
 
 export default function RefundPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white px-4 py-16 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-slate-950 text-white pt-20 px-4 pb-16 sm:px-6 lg:px-8">
+      <Navbar />
       <div className="max-w-4xl mx-auto space-y-10">
         <section className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7B93FF]">

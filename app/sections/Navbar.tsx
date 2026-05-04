@@ -1,7 +1,9 @@
 'use client'
 
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
   { label: 'Tracks', href: '#tracks' },
@@ -21,34 +23,29 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleNav = (href: string) => {
-    setMobileOpen(false)
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0B0D1A]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <button onClick={() => handleNav('#hero')} className="flex items-center gap-2">
-          <img src="/alt_logo.png" alt="Altrodav" className="h-9 w-auto object-contain" />
-        </button>
+        <Link href="/#hero" className="flex items-center gap-2">
+          <Image src="/alt_logo.png" alt="Altrodav" width={144} height={36} className="h-9 w-auto object-contain" />
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <button key={link.href} onClick={() => handleNav(link.href)} className="text-sm text-gray-400 hover:text-white transition-colors">
+            <Link key={link.href} href={`/${link.href}`} className="text-sm text-gray-400 hover:text-white transition-colors">
               {link.label}
-            </button>
+            </Link>
           ))}
         </div>
 
         <div className="hidden md:block">
-          <button onClick={() => handleNav('#enroll')} className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-opacity">
+          <Link href="/#enroll" className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-opacity">
             Enroll Now
-          </button>
+          </Link>
         </div>
 
         <button className="md:hidden text-white" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -56,13 +53,13 @@ export default function Navbar() {
         <div className="md:hidden bg-[#0B0D1A]/98 backdrop-blur-xl border-b border-white/10">
           <div className="px-4 py-4 flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
-              <button key={link.href} onClick={() => handleNav(link.href)} className="text-sm text-gray-400 hover:text-white transition-colors text-left">
+              <Link key={link.href} href={`/${link.href}`} className="text-sm text-gray-400 hover:text-white transition-colors text-left">
                 {link.label}
-              </button>
+              </Link>
             ))}
-            <button onClick={() => handleNav('#enroll')} className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white text-center">
+            <Link href="/#enroll" className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white text-center">
               Enroll Now
-            </button>
+            </Link>
           </div>
         </div>
       )}
