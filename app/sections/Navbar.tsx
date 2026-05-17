@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { label: 'Program', href: '#program' },
   { label: 'Placement', href: '#placement' },
   { label: 'Outcomes', href: '#outcomes' },
-  { label: 'Pricing', href: '#pricing' },
+  // { label: 'Pricing', href: '#pricing' },
 ]
 
 export default function Navbar() {

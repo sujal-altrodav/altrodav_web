@@ -11,7 +11,7 @@ import ProgramTimeline from './sections/ProgramTimeline'
 import PlacementEvent from './sections/PlacementEvent'
 import StudentOutcomes from './sections/StudentOutcomes'
 import ForColleges from './sections/ForColleges'
-import Pricing from './sections/Pricing'
+// import Pricing from './sections/Pricing'
 import EnrollmentForm from './sections/EnrollmentForm'
 import FAQ from './sections/FAQ'
 import Footer from './sections/Footer'
@@ -78,9 +78,9 @@ export default function Page() {
           <ForColleges />
         </div>
         {/* White: Pricing */}
-        <div className="bg-white text-gray-900">
+        {/* <div className="bg-white text-gray-900">
           <Pricing />
-        </div>
+        </div> */}
         {/* Dark section: Enrollment + FAQ */}
         <div className="bg-[#0B0D1A] text-white">
           <EnrollmentForm />
