@@ -4,7 +4,7 @@ import InfluencerEnrollmentForm from '@/app/sections/InfluencerEnrollmentForm'
 import Footer from '@/app/sections/Footer'
 
 export const metadata = {
-  title: 'Influencer Registration - Altrodav',
+  title: 'Altrodav Industry Immersive Program | Free Webinar Registration',
   description: 'Register for our Industry Immersive Program via influencer referral',
 }
 

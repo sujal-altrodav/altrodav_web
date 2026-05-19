@@ -125,11 +125,8 @@ export default function GeneralEnrollmentForm() {
             Enrollment
           </p>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">
-            Direct Application
+            Altrodav Industry Immersive Program | Free Webinar Registration
           </h1>
-          <p className="text-gray-400 max-w-md mx-auto">
-            Join the Industry Immersive Program
-          </p>
         </div>
 
         <Card className="border-white/10 bg-white/5 backdrop-blur-sm max-w-2xl mx-auto">

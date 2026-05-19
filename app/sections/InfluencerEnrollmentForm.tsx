@@ -1,13 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowRight, Laptop, MapPin, Brain, CheckCircle2, Loader2, Users } from 'lucide-react'
+import { ArrowRight, Laptop, MapPin, Brain, CheckCircle2, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Slider } from '@/components/ui/slider'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 
 const GOOGLE_FORM_ACTION_INFLUENCER =
   'https://docs.google.com/forms/d/e/1FAIpQLSdNyABPRSpA4FigcF0WHu504sz0RflfaHt_UYoRQwhnvIWthg/formResponse'
@@ -125,20 +125,11 @@ export default function InfluencerEnrollmentForm() {
             Enrollment
           </p>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">
-            Influencer Registration
+            Altrodav Industry Immersive Program | Free Webinar Registration
           </h1>
-          <p className="text-gray-400 max-w-md mx-auto">
-            Register via Influencer Referral
-          </p>
         </div>
 
         <Card className="border-white/10 bg-white/5 backdrop-blur-sm max-w-2xl mx-auto">
-          <CardHeader className="pb-4">
-            <CardTitle className="text-white flex items-center gap-2">
-              <Users className="w-5 h-5 text-[#4A5FE7]" />
-              Registration via Influencer Referral
-            </CardTitle>
-          </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}

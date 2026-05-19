@@ -4,7 +4,7 @@ import GeneralEnrollmentForm from '@/app/sections/GeneralEnrollmentForm'
 import Footer from '@/app/sections/Footer'
 
 export const metadata = {
-  title: 'General Enrollment - Altrodav',
+  title: 'Altrodav Industry Immersive Program | Free Webinar Registration',
   description: 'Join our Industry Immersive Program through direct application',
 }
 
