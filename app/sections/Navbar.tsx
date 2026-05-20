@@ -39,7 +39,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Link href="/#enroll" className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-opacity">
+          <Link href="/enroll-general" className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-opacity">
             Enroll Now
           </Link>
         </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/#enroll" className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white text-center">
+            <Link href="/enroll-general" className="px-6 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white text-center">
               Enroll Now
             </Link>
           </div>

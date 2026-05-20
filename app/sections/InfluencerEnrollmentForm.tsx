@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowRight, Laptop, MapPin, Brain, CheckCircle2, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -22,6 +22,7 @@ const ENTRY_INFLUENCER = {
   hasLaptop: 'entry.1170550368',
   attendanceMode: 'entry.540191966',
   placementEvent: 'entry.307562982',
+  referral: 'entry.1976617354',
 } as const
 
 const roleOptions = [
@@ -43,10 +44,62 @@ export default function InfluencerEnrollmentForm() {
   const [hasLaptop, setHasLaptop] = useState('')
   const [mode, setMode] = useState('')
   const [placementEvent, setPlacementEvent] = useState('')
+  const [referral, setReferral] = useState('')
 
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+
+  // Read referral parameter from URL on component mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const refParam = params.get('ref')
+      if (refParam) {
+        setReferral(refParam)
+      }
+    }
+  }, [])
+
+  // Auto-fill and hide referral field in any embedded Google Form
+  useEffect(() => {
+    if (!referral || typeof window === 'undefined') return
+
+    // Function to set and hide the referral field
+    const setReferralField = () => {
+      const field = document.querySelector(`input[name="${ENTRY_INFLUENCER.referral}"]`) as HTMLInputElement
+      if (field) {
+        field.value = referral
+        // Hide the field and its container
+        field.style.display = 'none'
+        const container = field.closest('[data-field-id], [role="row"], .form-group, .question') as HTMLElement
+        if (container) {
+          container.style.display = 'none'
+        }
+      }
+    }
+
+    // Try immediately
+    setReferralField()
+
+    // For async-loaded forms, retry with delays
+    let retries = 0
+    const maxRetries = 30
+    const interval = setInterval(() => {
+      if (retries >= maxRetries) {
+        clearInterval(interval)
+        return
+      }
+      const field = document.querySelector(`input[name="${ENTRY_INFLUENCER.referral}"]`)
+      if (field) {
+        setReferralField()
+        clearInterval(interval)
+      }
+      retries++
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [referral])
 
   const validate = () => {
     const newErrors: Record<string, string> = {}
@@ -81,6 +134,7 @@ export default function InfluencerEnrollmentForm() {
     formData.append(ENTRY_INFLUENCER.hasLaptop, hasLaptop)
     formData.append(ENTRY_INFLUENCER.attendanceMode, mode)
     formData.append(ENTRY_INFLUENCER.placementEvent, placementEvent)
+    if (referral) formData.append(ENTRY_INFLUENCER.referral, referral)
 
     try {
       await fetch(GOOGLE_FORM_ACTION_INFLUENCER, {

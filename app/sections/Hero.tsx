@@ -1,6 +1,7 @@
 'use client'
 
 import { FiShield, FiBriefcase, FiTrendingUp, FiArrowRight } from 'react-icons/fi'
+import Link from 'next/link'
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -33,9 +34,9 @@ export default function Hero() {
             India&apos;s top campus-to-career acceleration platform. A 3-month intensive program that transforms engineering students into industry-ready professionals with guaranteed placement opportunities.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button onClick={() => scrollTo('#enroll')} className="group px-8 py-3.5 rounded-lg font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-all text-sm flex items-center gap-2">
+            <Link href="/enroll-general" className="group px-8 py-3.5 rounded-lg font-semibold bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-all text-sm flex items-center gap-2">
               Explore Programs <FiArrowRight className="group-hover:translate-x-1 transition-transform" size={16} />
-            </button>
+            </Link>
             <button onClick={() => scrollTo('#program')} className="px-8 py-3.5 rounded-lg font-semibold border border-white/15 text-white hover:bg-white/5 transition-colors text-sm">
               How It Works
             </button>
