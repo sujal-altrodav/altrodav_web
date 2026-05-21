@@ -52,28 +52,37 @@ export default function EnrollmentForm() {
         </div>
 
         {/* Enrollment Options Grid */}
-        <div className={`grid ${hasReferral ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-6 max-w-3xl mx-auto`}>
+        <div className={`grid ${hasReferral ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-4 max-w-2xl mx-auto`}>
           {/* General Enrollment Card */}
-          <Card className="border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#4A5FE7]/50 transition-all hover:shadow-lg hover:shadow-[#4A5FE7]/20">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-white flex items-center gap-2">
-                <ArrowRight className="w-5 h-5 text-[#4A5FE7]" />
-                Direct Application
+          <Card className="border-white/20 bg-white/10 backdrop-blur-md hover:border-[#4A5FE7]/60 transition-all hover:shadow-lg hover:shadow-[#4A5FE7]/20">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-base md:text-lg text-white flex items-center gap-2">
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-[#4A5FE7] flex-shrink-0" />
+                Apply now
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-sm text-gray-300">
+            <CardContent className="space-y-2.5">
+              <p className="text-xs md:text-sm text-white leading-snug">
                 Apply directly to join our Industry Immersive Program. Complete the form and our team will review your application.
               </p>
-              <ul className="text-xs text-gray-400 space-y-2">
-                <li>✓ Flexible enrollment</li>
-                <li>✓ All tracks available</li>
-                <li>✓ Various modes</li>
+              <ul className="text-xs text-white space-y-1">
+                <li className="flex items-center gap-2">
+                  <span className="text-[#4A5FE7] font-bold text-sm">✓</span>
+                  <span>Flexible enrollment</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#4A5FE7] font-bold text-sm">✓</span>
+                  <span>All tracks available</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#4A5FE7] font-bold text-sm">✓</span>
+                  <span>Various modes</span>
+                </li>
               </ul>
-              <Link href="/enroll-general">
-                <Button className="w-full text-base py-6 bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90">
+              <Link href="/enroll-general" className="block pt-2">
+                <Button className="w-full text-xs md:text-sm py-4 md:py-5 bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-opacity">
                   Start Application
-                  <ArrowRight className="w-5 h-5 ml-1" />
+                  <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 ml-1.5" />
                 </Button>
               </Link>
             </CardContent>
@@ -81,26 +90,35 @@ export default function EnrollmentForm() {
 
           {/* Influencer Registration Card - Only visible with referral */}
           {hasReferral && (
-            <Card className="border-white/10 bg-white/5 backdrop-blur-sm hover:border-[#4A5FE7]/50 transition-all hover:shadow-lg hover:shadow-[#4A5FE7]/20">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-white flex items-center gap-2">
-                  <Users className="w-5 h-5 text-[#4A5FE7]" />
+            <Card className="border-white/20 bg-white/10 backdrop-blur-md hover:border-[#4A5FE7]/60 transition-all hover:shadow-lg hover:shadow-[#4A5FE7]/20">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base md:text-lg text-white flex items-center gap-2">
+                  <Users className="w-4 h-4 md:w-5 md:h-5 text-[#4A5FE7] flex-shrink-0" />
                   Influencer Registration
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm text-gray-300">
+              <CardContent className="space-y-2.5">
+                <p className="text-xs md:text-sm text-white leading-snug">
                   Referred by one of our influencers? Register through their referral and get prioritized support.
                 </p>
-                <ul className="text-xs text-gray-400 space-y-2">
-                  <li>✓ Prioritized review</li>
-                  <li>✓ Special benefits</li>
-                  <li>✓ Dedicated support</li>
+                <ul className="text-xs text-white space-y-1">
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#4A5FE7] font-bold text-sm">✓</span>
+                    <span>Prioritized review</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#4A5FE7] font-bold text-sm">✓</span>
+                    <span>Special benefits</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#4A5FE7] font-bold text-sm">✓</span>
+                    <span>Dedicated support</span>
+                  </li>
                 </ul>
-                <Link href="/enroll-influencer">
-                  <Button className="w-full text-base py-6 bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90">
+                <Link href="/enroll-influencer" className="block pt-2">
+                  <Button className="w-full text-xs md:text-sm py-4 md:py-5 bg-gradient-to-r from-[#4A5FE7] to-[#00BCD4] text-white hover:opacity-90 transition-opacity">
                     Register Now
-                    <ArrowRight className="w-5 h-5 ml-1" />
+                    <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 ml-1.5" />
                   </Button>
                 </Link>
               </CardContent>
