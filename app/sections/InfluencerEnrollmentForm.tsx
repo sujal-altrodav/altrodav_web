@@ -187,7 +187,7 @@ export default function InfluencerEnrollmentForm() {
             Enrollment
           </p>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">
-            Altrodav Industry Immersive Program | Free Webinar Registration
+            Altrodav Industry Immersive Program 
           </h1>
         </div>
 
