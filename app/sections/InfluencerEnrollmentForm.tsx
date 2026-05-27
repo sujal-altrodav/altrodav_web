@@ -451,12 +451,7 @@ export default function InfluencerEnrollmentForm() {
                 )}
               </div>
 
-              {/* Info Box */}
-              <div className="bg-[#4A5FE7]/10 border border-[#4A5FE7]/20 rounded-lg p-4">
-                <p className="text-sm text-gray-300">
-                  <span className="font-semibold text-[#4A5FE7]">✓</span> 
-                </p>
-              </div>
+             
 
               {/* Submit */}
               <Button
