@@ -454,7 +454,7 @@ export default function InfluencerEnrollmentForm() {
               {/* Info Box */}
               <div className="bg-[#4A5FE7]/10 border border-[#4A5FE7]/20 rounded-lg p-4">
                 <p className="text-sm text-gray-300">
-                  <span className="font-semibold text-[#4A5FE7]">✓</span> Thank you for being referred by one of our influencers! We'll prioritize your application.
+                  <span className="font-semibold text-[#4A5FE7]">✓</span> 
                 </p>
               </div>
 
