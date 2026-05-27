@@ -23,6 +23,8 @@ const ENTRY_INFLUENCER = {
   attendanceMode: 'entry.540191966',
   placementEvent: 'entry.307562982',
   referral: 'entry.1976617354',
+  graduationYear: 'entry.58429029',
+  paidProgramConfirm: 'entry.711169603',
 } as const
 
 const roleOptions = [
@@ -45,6 +47,8 @@ export default function InfluencerEnrollmentForm() {
   const [mode, setMode] = useState('')
   const [placementEvent, setPlacementEvent] = useState('')
   const [referral, setReferral] = useState('')
+  const [graduationYear, setGraduationYear] = useState('')
+  const [paidProgramConfirm, setPaidProgramConfirm] = useState('')
 
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitted, setSubmitted] = useState(false)
@@ -114,6 +118,8 @@ export default function InfluencerEnrollmentForm() {
     if (!hasLaptop) newErrors.hasLaptop = 'This field is required'
     if (!mode) newErrors.mode = 'Select a mode'
     if (!placementEvent) newErrors.placementEvent = 'This field is required'
+    if (!graduationYear) newErrors.graduationYear = 'Graduation year is required'
+    if (!paidProgramConfirm) newErrors.paidProgramConfirm = 'Please confirm to proceed'
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -135,6 +141,8 @@ export default function InfluencerEnrollmentForm() {
     formData.append(ENTRY_INFLUENCER.attendanceMode, mode)
     formData.append(ENTRY_INFLUENCER.placementEvent, placementEvent)
     if (referral) formData.append(ENTRY_INFLUENCER.referral, referral)
+    formData.append(ENTRY_INFLUENCER.graduationYear, graduationYear)
+    formData.append(ENTRY_INFLUENCER.paidProgramConfirm, paidProgramConfirm)
 
     try {
       await fetch(GOOGLE_FORM_ACTION_INFLUENCER, {
@@ -388,6 +396,58 @@ export default function InfluencerEnrollmentForm() {
                   <p className="text-sm text-red-400">
                     {errors.placementEvent}
                   </p>
+                )}
+              </div>
+
+              {/* Graduation Year */}
+              <div className="space-y-2">
+                <Label htmlFor="graduationYear" className="text-gray-300">
+                  Graduation Year <span className="text-red-400">*</span>
+                </Label>
+                <Input
+                  id="graduationYear"
+                  type="number"
+                  placeholder="e.g., 2024"
+                  value={graduationYear}
+                  onChange={(e) => setGraduationYear(e.target.value)}
+                  className="bg-white/5 border-white/10 text-white placeholder:text-gray-600"
+                  min="2020"
+                  max="2030"
+                />
+                {errors.graduationYear && (
+                  <p className="text-sm text-red-400">{errors.graduationYear}</p>
+                )}
+              </div>
+
+              {/* Paid Program Confirmation */}
+              <div className="space-y-3">
+                <Label className="text-gray-300">
+                  Paid Program Confirmation <span className="text-red-400">*</span>
+                </Label>
+                <p className="text-xs text-gray-500 -mt-1">
+                  Please confirm that you understand this is a paid program for serious candidates only.
+                </p>
+                <RadioGroup
+                  value={paidProgramConfirm}
+                  onValueChange={setPaidProgramConfirm}
+                  className="flex gap-4"
+                >
+                  {['I confirm'].map((option) => (
+                    <label
+                      key={option}
+                      className={`flex-1 flex items-center gap-2.5 p-3 rounded-lg border cursor-pointer transition-all ${
+                        paidProgramConfirm === option
+                          ? 'border-[#4A5FE7] bg-[#4A5FE7]/10'
+                          : 'border-white/10 hover:border-[#4A5FE7]/40'
+                      }`}
+                    >
+                      <RadioGroupItem value={option} className="border-gray-400" />
+                      <span className="text-sm text-gray-300">{option}</span>
+                    </label>
+                  ))}
+                </RadioGroup>
+                {errors.paidProgramConfirm && (
+                  <p className="text-sm text-red-400">{errors.paidProgramConfirm}</p>
                 )}
               </div>
 
