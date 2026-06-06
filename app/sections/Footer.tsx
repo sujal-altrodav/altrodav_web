@@ -11,7 +11,11 @@ const PROGRAM_LINKS = [
   'DevOps Engineering',
 ]
 
-const RESOURCE_LINKS = ['Refund Policy']
+const RESOURCE_LINKS = [
+  { label: 'Refund Policy', href: '/refund-policy' },
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of Service', href: '/terms-of-service' },
+]
 
 export default function Footer() {
   return (
@@ -65,12 +69,12 @@ export default function Footer() {
             <p className="font-semibold mb-4 text-sm">Resources</p>
             <ul className="space-y-2.5">
               {RESOURCE_LINKS.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <a
-                    href="/refund-policy"
+                    href={link.href}
                     className="text-sm text-gray-500 hover:text-white transition-colors"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -98,13 +102,13 @@ export default function Footer() {
 
           <div className="mt-4 sm:mt-0 sm:absolute sm:right-0 sm:top-8 flex justify-center sm:justify-end gap-6">
             <a
-              href="#"
+              href="/privacy-policy"
               className="text-xs text-gray-600 hover:text-gray-400 transition-colors"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="/terms-of-service"
               className="text-xs text-gray-600 hover:text-gray-400 transition-colors"
             >
               Terms of Service
